@@ -1,0 +1,82 @@
+
+<!DOCTYPE html>
+  <html>
+    <head>
+      <style>
+            .container{
+              background-color:#008080;
+              font-size:30px;
+               margin-left:50px;
+                      }
+
+            .btn{
+              margin-left: 500px;
+              margin-bottom:30px;
+              
+            }
+           
+
+      </style>
+      
+    </head>
+
+    <body>
+      
+        
+          
+            
+        <h1><center><u>QUIZ</u></center></h1>
+        <div class="container">
+        <form name="myform">
+          <h5 id="cq">Q1)What is the latest version of HTML?</h5>
+
+          <input type="radio"name="q1"value="a"><span id="cq1">HTML7</span></br>
+          <input type="radio"name="q1"value="b"><span id="cq2">HTML5</span></br>
+          <input type="radio"name="q1"value="c"><span id="cq3">HTML6</span></br>
+
+          <h5>Q2)What is the latest version of CSS?</h5>
+          <input type="radio"name="q2"value="a">CSS3</br>
+          <input type="radio"name="q2"value="b">CSS5</br>
+          <input type="radio"name="q2"value="c">CSS6</br>
+
+          <h5>Q3)What is the full form of PHP?</h5>
+          <input type="radio"name="q3"value="a">Per Html Page</br>
+          <input type="radio"name="q3"value="b">Person Home Page</br>
+          <input type="radio"name="q3"value="c">Personal Home Page</br>
+
+          <h5>Q4)The first web page was made by whom?</h5>
+          <input type="radio"name="q4"value="a"> Mar Andreessen</br>
+          <input type="radio"name="q4"value="b">Tim Berners-Lee</br>
+          <input type="radio"name="q4"value="c">Jamie Zawinski</br></br>
+           <div class="btn">
+          <input type="button"value="submit"style="background-color:green;padding:10px;"onclick="check()">
+          <input type="button"value="change one question"style="background-color:green;padding: 10px;"onclick="change()">
+           </div>
+        </form>
+      </div>
+       
+    <script>
+      function check(){
+        var q1=document.myform.q1.value;
+        var q2=document.myform.q2.value;
+        var q3=document.myform.q3.value;
+        var q4=document.myform.q4.value;
+         var count=0;
+         if(q1=="b"){count++;}
+         if(q2=="a"){count++;}
+         if(q3=="c"){count++;}
+         if(q4=="b"){count++;}
+          alert("You got "+count+" marks");
+      }
+      function change(){
+        document.getElementById('cq').innerHTML="Q1)Full form of CSS:";
+        document.getElementById('cq1').innerHTML="Casual Style Sheet";
+        document.getElementById('cq2').innerHTML="Cascading Style Sheet";
+        document.getElementById('cq3').innerHTML="Common System Sheet";
+        
+
+      }
+    </script>
+        </body>
+  </html>
+        
